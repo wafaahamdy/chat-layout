@@ -59,6 +59,7 @@ body{
  
 @media (max-width:$breakpoint-smphone) {
     margin-left: -7% ;
+    background-color: hotpink;
 }
       &_top{
         width:60%;
@@ -69,7 +70,7 @@ body{
         top: 0;
         left:50%;
         transform: translateX(-50%);
-        
+
     }
 }
 

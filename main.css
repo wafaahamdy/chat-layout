@@ -34,7 +34,8 @@ body {
   position: relative; }
   @media (max-width: 425px) {
     .phone {
-      margin-left: -7%; } }
+      margin-left: -7%;
+      background-color: hotpink; } }
   .phone_top {
     width: 60%;
     height: 40px;

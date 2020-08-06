@@ -19,6 +19,7 @@ $color-grad-light :  #8838ff ;
 $color-grad-dark: #e942ff ;
 
 /* Breakpoints */
+$breakpoint-smphone:425px;
 $breakpoint-phone: 640px;
 $breakpoint-tablet: 768px;
 $breakpoint-desktop: 1024px;
@@ -31,6 +32,9 @@ body{
  
 }
 
+*{
+    box-sizing: border-box;
+}
 
 .floatLeft{float: left;}
 .floatRight{float: right;}
@@ -45,13 +49,17 @@ body{
 
 .phone {
     width:300px;
-    transform: scale(.7);
-     
+    transform: scale(.8);
+    margin: 0 auto;
     background-color: $color-White;
     border-radius: 20px;
     padding: 10px;
     position: relative;
-
+    
+ 
+@media (max-width:$breakpoint-smphone) {
+    margin-left: -7% ;
+}
       &_top{
         width:60%;
         height: 40px;
@@ -181,7 +189,7 @@ text-align: center;
 .container{
     position: relative;
     min-height: 100vh;
-    background: url("/images/bg.svg");
+    background: url("images/bg.svg");
     background-size: cover;
     background-repeat: no-repeat;
     overflow-x: hidden;
@@ -222,7 +230,10 @@ text-align: center;
    @media (max-width:$breakpoint-phone) {
     width: 90%; 
     padding-top: 100px; 
-    margin-right: 0;
+    margin: 0 auto;
+     
+  
+    
 }   
 
 }
@@ -233,6 +244,7 @@ text-align: center;
    @media (max-width:$breakpoint-phone) {
     width: 90%; 
     text-align: center;
+    margin: 0 auto;
      
 } 
  
@@ -246,7 +258,9 @@ text-align: center;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    justify-content: center;    
+    justify-content: center;   
+    margin: 0 auto;
+    
     }
    
      

@@ -18,6 +18,10 @@ $color-VeryLightMagenta : hsl(289, 100%, 72%) ; // (radio button outline):
 $color-grad-light :  #8838ff ;
 $color-grad-dark: #e942ff ;
 
+/* Breakpoints */
+$breakpoint-phone: 640px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
 
 body{
     font-family: 'Rubik', sans-serif;
@@ -30,7 +34,6 @@ body{
 
 .floatLeft{float: left;}
 .floatRight{float: right;}
-.clearFix {clear: both;}
 .clearfix:after
 {
 	content: ".";
@@ -185,7 +188,7 @@ text-align: center;
     background-repeat: no-repeat;
     overflow-x: hidden;
 
-    @media (max-width:425px) {
+    @media (max-width:$breakpoint-phone) {
        background-position: -120px;
     } 
 }
@@ -199,16 +202,17 @@ text-align: center;
     align-content: center;
     justify-content: center;
  
-    @media (max-width:1024px) {
+    @media (max-width:$breakpoint-desktop) {
         width: 80%;  
     }
   
-    @media (max-width:786px) {
-        width: 90%;  
+    @media (max-width:$breakpoint-tablet) {
+        width: 100%;  
     }
    
-    @media (max-width:425px) {
+    @media (max-width:$breakpoint-phone) {
         flex-direction: column;
+        width: 80%;  
     } 
  
 }
@@ -217,7 +221,7 @@ text-align: center;
   
    margin-right: 15%;
 
-   @media (max-width:425px) {
+   @media (max-width:$breakpoint-phone) {
     width: 90%; 
     padding-top: 100px; 
     margin-right: 0;
@@ -228,7 +232,7 @@ text-align: center;
 .col-2{
    width:55%;
     
-   @media (max-width:425px) {
+   @media (max-width:$breakpoint-phone) {
     width: 90%; 
     text-align: center;
      
